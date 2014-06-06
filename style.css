@@ -1,0 +1,593 @@
+/*
+Theme Name: TamayoWeb
+Theme URI: http://tamayoweb.net/
+Description: blah blah blah.
+Author: Coby Tamayo
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags: two-columns, custom-menu
+*/
+
+/* FONTS */
+
+@font-face {
+    font-family: High Tower Text Italic;
+    font-weight: bold;
+    src: url("fonts/High Tower Text Italic.ttf");
+}
+@font-face {
+    font-family: High Tower Text;
+    font-weight: bold;
+    src: url("fonts/High Tower Text.ttf");
+}
+
+
+
+
+
+
+
+
+/* GENERAL ELEMENT-WIDE RULES */
+
+body {
+    font-family: "High Tower Text Italic";
+    font-size: 23px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    position: relative;
+    float: left;
+    margin: 0.1em 0 0 15px;
+}
+
+p {
+    font-family: Verdana;
+    margin: 1em 1.5em 1em 0;
+    color: #383;
+    line-height: 160%;
+    margin: 0.5em 0;
+}
+
+em {
+    font-style: italic;
+}
+strong {
+    font-weight: bold;
+}
+sub {
+	font-size: 0.7em;
+	vertical-align: sub;
+}
+sup {
+	font-size: 0.7em;
+	vertical-align: super;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CONTAINERS & COLUMNS */
+
+#bigWrapper {
+    position: absolute;
+    min-width: 1100px;
+    width: 100%;
+}
+
+#smWrapper {
+    position: fixed;
+    top: 0;
+    min-width: 1100px;
+    width: 100%;
+}
+
+.wrapper {
+    position: relative;
+    min-width: 1100px;
+    width: 100%;
+    margin-bottom: -5000px;
+    padding-bottom: 5000px;
+}
+
+#wrapperR {
+    min-width: 550px;
+    background-color: #CDDED2;
+}
+
+#wrapperL {
+    right: 45%;
+    min-width: 550px;
+    background-color: #FFFFEE;
+}
+    
+.column {
+    float: left;
+    position: relative;
+    width: 50%;
+    left: 50%;
+}
+
+
+
+
+
+
+
+
+
+/* NAVIGATION BAR */
+
+
+
+#navWrap {
+    top: 0;
+    width: 100%;
+    position: relative;
+    left: 45%;
+    min-width: 1000px;
+    height: 2em;
+    background: #800;
+    z-index: 3;
+    font-family: Verdana;
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+nav {
+    position: absolute;
+    left: 56%;
+}
+    nav ul {
+        position: relative;
+        left: 6%;
+        display: inline;
+        list-style: none;
+    }
+    nav li {
+        padding: 10px;
+        position: relative;
+        float: left;
+        margin: 0 2px 0 2px;
+    }
+    nav a {
+        padding: 10px;
+        color: #EEE;
+        text-decoration: none;
+    }
+    nav li:hover,
+    nav .currentPage {
+        padding-top: 5px;
+        border-top: 5px solid #800;
+        background: #cdded2;
+    }
+    nav li:hover a,
+    nav .currentPage a {
+        color: #820;
+    }
+
+
+
+
+
+
+/* HEADER */
+
+.top {
+    width: 100%;
+    height: 200px;
+    z-index: 2;
+    position: relative;
+    float: left;
+}
+    .top div {
+        height: 150px;
+    }
+    
+    #left .top {
+        padding-bottom: 30px;
+        background: transparent url('pix/fadeL.png') repeat-x bottom;
+    }
+        #left .top div {
+            padding-bottom: 30px;
+            background: #FFE;
+        }
+        
+    #right .top {
+        border-top: 30px solid #CDDED2;
+        background: transparent url('pix/fadeR.png') repeat-x bottom;
+    }
+        #right .top div {
+            background: #CDDED2;
+        }
+
+
+
+/* LEFT HEADER */
+
+#left {
+    top: 37px;
+    min-width: 550px;
+}
+    #left h1,
+    #left h2,
+    #left h3 {
+        font-family: high tower text;
+    }
+    #left h1 {
+        left: 134px;
+        top: 20px;
+        font-size: 5.2em;
+        line-height: 50%;
+        color: #82AA86;
+    }
+    #left h2 {
+        left: 178px;
+        top: 48px;
+        font-size: 2em;
+        color: #308030;
+    }
+    
+    #logo {
+        position: absolute;
+        top: 32px;
+        left: 20px;
+    }
+    
+
+
+
+
+
+/* RIGHT HEADER */
+    
+#right .top * {
+    padding-left: 15px;
+}
+#right .top h1 {
+    font-size: 2em;
+    color: #A76;
+}
+#right .top h2 {
+    font-size: 1.8em;
+    color: #954;
+}
+#right .top h3 {
+    font-size: 1.5em;
+    color: #800;
+}
+
+
+
+
+
+
+
+/* CONTENT */
+
+/* a hack to get the anchors to position the page correctly */
+a.cAnchor {
+    position: relative;
+    top: -16em;
+    color: transparent;
+}
+	
+#content {
+    width: 100%;
+    min-width: 1000px;
+    position: absolute;
+    z-index: 1;
+    top: 10.5em;
+}
+
+    article {
+        position: relative;
+        clear: both;
+        font-family: verdana;
+        font-size: 0.6em;
+        color: #383;
+    }
+        article div {
+            padding: 0 3% 0 7%;
+            position: relative;
+            float: left;
+        }
+        article .entry-left {
+            clear: left;
+            width: 45%;
+        }
+        article .entry-right {
+            clear: right;
+            width: 35%;
+        }
+            article h1,
+            article h2,
+            article h3,
+            article p {
+                float: left;
+                clear: both;
+            }
+            
+            article h1 {
+                width: 65%;
+                padding: 0 0 0.5em 2em;
+                margin: 1em 0 0.7em 3em;
+                border-bottom: 1px solid #7A7;
+                font-size: 1.6em;
+                font-family: Palatino;
+                letter-spacing: 2px;
+            }
+            article div h2,
+            article div h3 {
+                padding: 0 0 0 1em;
+                font-size: 1.2em;
+                font-family: helvetica;
+                letter-spacing: 2px;
+                line-height: 120%;
+            }
+                article div h2 {
+                    font-weight: bold;
+                    margin: 2em 0 0 0;
+                }
+                article div h3 {
+                    margin: 0 0 0.5em 0;
+                }
+        article a {
+            text-decoration: none;
+            border-bottom: 1px solid;
+            font-weight: bold;
+        }
+            article a:link,
+            article a:visited {
+                color: #493;
+                border-color: #493;
+            }
+            article a:hover,
+            article a:active {
+                color: #161;
+                border-color: #161;
+            }
+        article ul {
+            position: relative;
+            clear: both;
+            left: 2em;
+            margin: 0.5em;
+            display: block;
+            list-style-type: disc;
+        }
+	article li {
+		margin-top: 0.5em;
+	}
+
+	article footer {
+		position: relative;
+		float: left;
+		left: 15%;
+		margin-bottom: 3em;
+	}
+		article footer * {
+			margin: 0 2em 0 2em;
+		}
+    
+    .thumbs {
+        display: inline;
+    }
+        .thumbs li {
+            float: left;
+            margin-left: 5px;
+        }
+
+aside.left {
+	position: absolute;
+	float: left;
+	left: 3%;
+	width: 17%;
+}
+	aside.left h1 {
+		border: none;
+		font-size: 2em;
+		font-weight: bold;
+		color: #800;
+		padding: 0;
+		margin: 1em 0 1em 0;
+	}
+	aside.left p {
+		font-family: "High Tower Text";
+		font-size: 1.3em;
+		color: #954;
+	}
+
+.portf {
+	width: 100%;
+	padding: 0;
+}
+
+
+/* MAIN CONTACT */
+
+.wpcf7-form, .wpcf7 {
+	width: 100%;
+}
+	form .entry-left {
+		width: 42%;
+		left: 18%;
+		
+	}
+
+.wpcf7-response-output {
+	position: relative;
+	float: left;
+	left: -50%;
+	margin-bottom: 2em;
+}
+
+
+
+
+
+/* COLLAPSIBLE STUFF */
+
+#collapseRollover {
+    position:absolute;
+    top: 40px;
+    height: 210px;
+    width: 100%;
+    left: 50%;
+    background: transparent;
+    z-index: 4;
+}
+
+#collapseRollover.topCollapsed {
+	height: 15px;
+}
+
+#collapseBtn {
+    background: #CDDED2 url('pix/collapse.png');
+    border: 5px solid #CDDED2;
+    height: 16px;
+    width: 79px;
+    position: relative;
+    top: 160px;
+    float: right;
+    right: 10%;
+    z-index: 4;
+    opacity: 100;
+}
+
+.top.topCollapsed {
+    top: -180px;
+}
+
+#smLogo {
+    position: fixed;
+    z-index: 4;
+    height: 35px;
+    width: 50%;
+    top:-200px;
+    left: 10px;
+    font-family: high tower text;
+    color: #EEEEE6;
+}
+    #smLogo.topCollapsed {
+        top: 8px;
+    }
+    
+#content.topCollapsed {
+    top: 60px;
+}
+
+#collapseBtn.topCollapsed {
+    background: #CDDED2 url('pix/expand.png');
+    top: 5px;
+}
+        
+        
+        
+        
+        
+        
+/* FOOTER */
+
+#copyright {
+    float: left;
+    clear: both;
+    position: relative;
+    bottom: 0px;
+    left: 20%;
+    margin: 15px;
+    text-align: center;
+    font-size: 0.5em;
+    font-family: verdana;
+    color: #363;
+    z-index: 2;
+}
+
+
+
+
+
+
+/* FANG CHIA */
+
+.fcLinx {
+	width: 100%;
+	padding: 0;
+}
+	.fcLinx div {
+		padding: 0;
+	}
+	.fcLinx a:link,
+	.fcLinx a:visited,
+	.fcLinx a:active,
+	.fcLinx a:hover {
+		color: #000;
+		text-decoration: none;
+		font-weight: normal;
+	}
+
+.fcLine {
+	width: 100%;
+}
+
+.fcLetter, .fcExtra, .fcArrow {
+	float: left;
+}
+
+.fcLetter {
+	position: relative;
+	margin: 0 0.5em 0 2em;
+	z-index: 3;
+}
+.fcLetter a:link,
+.fcLetter a:visited {
+	padding: 0.7em;
+	border: 3px solid #E70;
+	background-color: #390;
+	border-radius: 6px;
+	/* hacks: */
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	font-family: courier, monospace;
+}
+.fcLetter a:hover,
+.fcLetter a:active {
+	background-color: #E70;
+	border-color: black;
+}
+
+.fcExtra {
+	position: absolute;
+	z-index: 2;
+}
+.fcExtra a:link,
+.fcExtra a:visited {
+	padding: 0.5em;
+	color: #000;
+	border: 3px solid #333;
+	background-color: #48823A;
+	border-radius: 6px;
+	/* hacks: */
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	font-family: courier, monospace;
+}
+.fcExtra a:active,
+.fcExtra a:hover {
+	background-color: #B40;
+	border-color: #555;
+}
+
+.fcArrow {
+	position: absolute;
+	float: left;
+	z-index: 1;
+}
